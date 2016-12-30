@@ -1,5 +1,6 @@
 import React from 'react';
 import Display from './display';
+import ReactDOM from'react-dom';
 
 export default class App extends React.Component{
   render(){
@@ -10,3 +11,4 @@ export default class App extends React.Component{
       );
   }
 }
+
