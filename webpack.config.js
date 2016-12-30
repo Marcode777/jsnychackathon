@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: { // resolve is where webpack is going to look for the files to bundle together
     modulesDirectories: ['node_modules', 'src'],
-    extensions: ['', '.js'] // these are the extensions that webpack is going to expect
+    extensions: ['', '.js', '.css'] // these are the extensions that webpack is going to expect // .css was added for css to work
   },
   module: { // this is going to be where we define our loaders, for now, we're only going to have one loader for this file because we only need to recognize js files
     loaders: [
@@ -22,6 +22,9 @@ module.exports = {
       test: /\.jsx?$/, // we're just going to use js files, but the ? means we can also use jsx files if we want
       exclude: /node_modules/,
       loaders: ['react-hot-loader', 'babel?presets[]=react,presets[]=es2015'] // these are the modules that we installed to help us load our app
+    },
+    {test: /\.css$/, // this was needed for css to work
+    loader: 'style-loader!css-loader' // this was needed for css to work
     }
     ]
   },
