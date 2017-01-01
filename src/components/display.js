@@ -2,9 +2,8 @@ import React from 'react';
 import {Component} from 'react';
 import './app.css';
 import ReactDOM from 'react-dom';
-import Container from 'muicss/lib/react/container';
-import Row from 'muicss/lib/react/row';
-import Col from 'muicss/lib/react/col';
+import { render } from 'react-dom';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 
 const Style1 = {
@@ -44,14 +43,13 @@ export default class Display extends React.Component{
           </div>
 
           <div className="second" style={Style2}> 
-            <Container fluid={true}>
+            <Grid>
               <Row>
-                <Col md="4">md-4</Col>
-                <Col md="4">md-4</Col>
-                <Col md="4">md-4</Col>
+                <Col md={4}><h3>Come, write code and participate at this hackathon that serves as a festival that will feature congregations of local coders just like you. You're invited to come and show what you've got in a competitive yet friendly and supportive environment. </h3></Col>
+                <Col md={4}><h3>Be a part of history at our first-ever hackathon. This is going to be our very first hackathon, so why not be a part of the start of something special? Come out and join us! </h3></Col>
+                <Col md={4}><h3>Register and sign up by entering your email...</h3></Col>
               </Row>
-            </Container> 
-            <h3>SECOND DISPLAY, THIS SECTION SHOULD HAVE A GRID SYSTEM WITH MORE INFO ABOUT THE EVENT </h3>
+            </Grid> 
           </div> 
 
 
